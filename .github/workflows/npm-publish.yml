@@ -15,9 +15,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      - name: check lock file
+      - run: ls -la
       - run: npm ci
       - run: npm test
-
+  
   publish-npm:
     needs: build
     runs-on: ubuntu-latest
