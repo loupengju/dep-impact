@@ -1,0 +1,40 @@
+{
+  "name": "dep-impact",
+  "version": "1.0.0",
+  "description": "一个用于分析Node.js项目中依赖包影响范围的命令行工具",
+  "main": "./bin/dep-impact.js",
+  "bin": {
+    "dep-impact": "./bin/dep-impact.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --mode production",
+    "prepublishOnly": "npm run build",
+    "version": "git add -A",
+    "postversion": "git push && git push --tags"
+  },
+  "keywords": [
+    "dependency",
+    "analysis",
+    "impact",
+    "cli"
+  ],
+  "author": "loupengju",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/loupengju/dep-impact.git"
+  },
+  "dependencies": {
+    "ansi-colors": "^4.1.3",
+    "cli-progress": "^3.12.0",
+    "cli-table3": "^0.6.5",
+    "madge": "^8.0.0"
+  },
+  "files": [
+    "dist",
+    "bin",
+    "lib",
+    "webpack.config.js"
+  ]
+}
