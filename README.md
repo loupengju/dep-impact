@@ -1,6 +1,6 @@
 # dep-impact
 
-[English](#english) | [中文](#chinese)
+[English](#english) | [中文](./README_CN.md)
 
 ## English
 
