@@ -10,16 +10,16 @@ async function main() {
     console.log('\n🔍 开始分析文件依赖关系...\n');
 
     // 获取git暂存区中被修改的文件
-    const stagedFiles = execSync('git diff --cached --name-only')
+    const stagedFiles = execSync('git status -s')
       .toString()
       .split('\n')
-      .filter(file => file && /\.(js|jsx|ts|tsx)$/.test(file));
+      .filter(line => line.trim())
+      .map(line => line.slice(3))
+      .filter(file => /\.(js|jsx|ts|tsx)$/.test(file));
     if (stagedFiles.length === 0) {
       console.log('没有检测到需要分析的文件变更');
       process.exit(0);
     }
-
-    console.log(`检测到 ${stagedFiles.length} 个文件变更\n`);
 
     // 生成项目依赖图
     const projectRoot = process.cwd();

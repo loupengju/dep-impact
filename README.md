@@ -1,15 +1,19 @@
 # dep-impact
 
-一个用于分析 Node.js 项目中依赖包影响范围的命令行工具。通过静态分析和依赖图构建，帮助开发者快速了解依赖包的使用情况和潜在影响。
+[English](#english) | [中文](#chinese)
 
-## 功能特点
+## English
 
-- 分析项目中本次的改动文件依赖情况
-- 识别直接依赖该包的文件和引用位置
-- 评估依赖包的潜在影响程度
-- 提供友好的命令行界面和进度展示
+A command-line tool for analyzing dependency impact in Node.js projects. Through static analysis and dependency graph construction, it helps developers quickly understand the usage and potential impact of dependencies.
 
-## 安装
+### Features
+
+- Analyze dependency relationships of modified files in the current changes
+- Identify files that directly depend on the package and their reference locations
+- Evaluate the potential impact level of dependencies
+- Provide a friendly command-line interface with progress display
+
+### Installation
 
 ```bash
 npm install -g dep-impact
@@ -19,7 +23,7 @@ npm install -g dep-impact
 
 基本用法：
 ```bash
-git add your-file
+your-file changed in your-project
 ```
 
 ```bash
