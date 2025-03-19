@@ -1,6 +1,6 @@
 {
   "name": "dep-impact",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "一个用于分析前端项目中依赖包影响范围的命令行工具",
   "main": "./bin/dep-impact.js",
   "bin": {
