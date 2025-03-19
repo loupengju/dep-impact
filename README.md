@@ -19,9 +19,10 @@ A command-line tool for analyzing dependency impact in Node.js projects. Through
 npm install -g dep-impact
 ```
 
-## 使用方法
+## Usage
 
-基本用法：
+Basic usage:
+
 ```bash
 your-file changed in your-project
 ```
