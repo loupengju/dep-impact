@@ -1,0 +1,40 @@
+# Development files
+.git
+.gitignore
+.npmignore
+
+# Source files
+src/
+
+# Test files
+test/
+__tests__/
+
+# Configuration files
+.eslintrc
+.prettierrc
+.editorconfig
+
+# Build files
+build/
+
+# Keep dist directory
+dist/
+
+# Documentation
+docs/
+
+# IDE files
+.idea/
+.vscode/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependencies
+node_modules/
+
+# Environment files
+.env
+.env.*
