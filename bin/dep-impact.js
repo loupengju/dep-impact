@@ -21,6 +21,8 @@ async function main() {
       process.exit(0);
     }
 
+    console.log(stagedFiles)
+
     // 生成项目依赖图
     const projectRoot = process.cwd();
     console.log('正在构建依赖图...');
@@ -28,8 +30,9 @@ async function main() {
       baseDir: projectRoot,
       excludeRegExp: [/node_modules/],
       fileExtensions: ['js', 'jsx', 'ts', 'tsx'],
-      tsConfig: './tsconfig.json',
-      webpackConfig: './webpack.config.js',
+      // 仅在存在配置文件时才使用相应配置
+      tsConfig: require('fs').existsSync('./tsconfig.json') ? './tsconfig.json' : undefined,
+      webpackConfig: require('fs').existsSync('./webpack.config.js') ? './webpack.config.js' : undefined,
       includeNpm: true,
       detectiveOptions: {
         ts: {
